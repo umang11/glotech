@@ -1,0 +1,384 @@
+
+.parallax-slider #mainCaptionHolder .container h2 {
+        a{
+            color: @white !important;
+        }
+        a:hover{
+            color: @white !important;
+        }    
+}
+
+.parallax-slider{
+    
+	position: relative;
+	width: 100%;
+	height: 580px;
+	display: block;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+    
+  		@media (max-width: 480px) {
+            display: none!important;
+		} 
+    
+    @media (max-width: 1200px) and (min-width: 979px){
+	height: 580px;
+    }
+	@media (min-width: 768px) and (max-width: 979px) {
+	height: 450px; 
+	}
+    @media (max-width: 767px){
+	   height: 350px;
+	}
+    
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+		.baseList{
+			display: none;
+		}
+		#mainImageHolder{
+			position: relative;
+			width: 100%;
+			height: 150%;
+			top: 0;
+			z-index: 1;
+				.primaryHolder{
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					z-index: 2;
+						img{
+							position: absolute;
+							max-width: inherit;
+						}         
+                    
+				}
+				.secondaryHolder{
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0px;
+					left: 0px;
+					z-index: 1;
+						img{
+							position: absolute;
+							max-width: inherit;
+						}
+                        
+
+				}
+		}
+		#mainCaptionHolder{
+			position: absolute;
+			width: 100%;
+			height: 150%;
+			top: 0;
+			left: 0;
+			text-align: center;
+			z-index: 2;
+				.container{
+					position: relative;
+					top: 37%;
+                    
+                        @media (max-width: 1200px) and (min-width: 979px){
+					           top: 35%;
+                        }
+                    	@media (min-width: 768px) and (max-width: 979px) {
+					           top: 35%;
+                    	}
+                    
+                            @media (max-width: 767px){
+					           top: 30%;
+                        	}
+						.primaryCaption{
+							position: absolute;
+							width: 100%;
+						}
+						.secondaryCaption{
+							position: absolute;
+							width: 100%;
+						}
+						h2{
+                            font-family: 'Open Sans', sans-serif;
+                            font-size: 60px;
+                            line-height: 60px;
+                            font-weight: 300 !important;
+                            font-style: normal;
+                            text-shadow: none;
+                            text-transform: uppercase;
+                            color: #FFF;
+                            text-align: left;
+                            width: 640px;
+                            
+                            @media (max-width: 767px){
+                                width: 75%;                            
+                                font-size: 40px;
+                                line-height: 40px;
+                                padding: 0 20px;
+                        	}
+						}
+						h3{
+							font-size: 40px;
+							line-height: 40px;
+							color: #fff;
+							font-weight: bold;
+							text-transform: uppercase;
+							margin-bottom: 25px;
+						}
+						p{
+							font-size: 20px;
+							line-height: 28px;
+							color: #fff;
+							margin-bottom: 30px;
+						}
+						.morebtn{
+							font-size: 20px;
+							line-height: 28px;
+							color: #fff;
+							padding: 8px 14px;
+							border: 2px solid #fff;
+							background: #08C;
+							.transition(all 0.5s ease);
+								&:hover{
+									text-decoration: none;
+									background: #363636;
+								}
+						}
+				}
+		}
+		&.zoom-fade-eff{
+			#mainImageHolder{
+				.primaryHolder{
+					.opacity(100);
+					.scale(1);
+						&.animateState{
+							.opacity(0);
+							.scale(3);
+						}
+				}
+				.secondaryHolder{
+					.opacity(100);
+						&.animateState{
+							.opacity(0);
+						}
+				}
+			}
+			#mainCaptionHolder{
+				.primaryCaption{
+					.opacity(100);
+						&.animateState{
+							.opacity(0);
+						}
+				}
+				.secondaryCaption{
+					.opacity(100);
+						&.animateState{
+							.opacity(0);
+						}
+				}
+			}
+		}
+		&.simple-fade-eff{
+			#mainImageHolder{
+				.primaryHolder{
+					.opacity(100);
+						&.animateState{
+							.opacity(0);
+						}
+				}
+				.secondaryHolder{
+					&.animateState{
+						.opacity(100);
+							&.animateState{
+								.opacity(0);
+							}
+					}
+				}
+			}
+			#mainCaptionHolder{
+				.primaryCaption{
+					.opacity(100);
+					.scale(1);
+						&.animateState{
+							.opacity(0);
+						}
+				}
+				.secondaryCaption{
+					.opacity(100);
+						&.animateState{
+							.opacity(0);
+						}
+				}
+			}
+		}
+		&.slide-top-eff{
+			#mainImageHolder{
+				.primaryHolder{
+					top: 0;
+						&.animateState{
+							top: -100%;
+						}
+				}
+				.secondaryHolder{
+					&.animateState{
+						top: 0;
+							&.animateState{
+								top: 100%;
+							}
+					}
+				}
+			}
+			#mainCaptionHolder{
+				.primaryCaption{
+					.opacity(100);
+					.scale(1);
+						&.animateState{
+							.opacity(0);
+						}
+				}
+				.secondaryCaption{
+					.opacity(100);
+						&.animateState{
+							.opacity(0);
+						}
+				}
+			}
+		}
+		.controlBtn{
+			width: 40px;
+			height: 60px;
+			display: block;
+			position: absolute;
+            display: none !important;
+			top: 50%;
+			margin-top: -30px;
+			cursor: pointer;
+			z-index: 2;
+				.innerBtn{
+					width: 40px;
+					height: 60px;
+					font-size: 25px;
+					line-height: 63px;
+					text-align: center;
+					color: #fff;
+					display: block;
+					position: relative;
+					z-index: 1;
+					background: #08C;
+					.transition(all 0.3s ease);
+				}
+				.slidesCounter{
+					width: 40px;
+					height: 60px;
+					background: #363636;
+					display: block;
+					position: absolute;
+					top: 0;
+					color: #fff;
+					text-align: center;
+					font-size: 16px;
+					line-height: 60px;
+					.transition(all 0.3s ease);
+				}
+				&.parallaxPrevBtn{
+					left: 0;
+						.innerBtn{
+							border-radius: 0 3px 3px 0;
+						}
+						.slidesCounter{
+							left: 0%;
+							border-radius: 0 3px 3px 0;
+						}
+						&:hover{
+							.innerBtn{
+								background: #363636;
+								border-radius: 0;
+							}
+							.slidesCounter{
+								left: 100%;
+							}
+						}
+				}
+				&.parallaxNextBtn{
+					right: 0;
+						.innerBtn{
+							border-radius: 3px 0 0 3px;
+						}
+						.slidesCounter{
+							right: 0%;
+							border-radius: 3px 0 0 3px;
+						}
+						&:hover{
+							.innerBtn{
+								background: #363636;
+								border-radius: 0;
+							}
+							.slidesCounter{
+								right: 100%;
+							}
+						}
+				}
+		}
+		#paralaxSliderPagination{
+            position: absolute;
+            top: 42%;
+            width: 26px;
+            text-align: center;
+            z-index: 2;
+            left: 50%;
+            margin-left: 560px;
+            display: block;
+			z-index: 2;
+            
+            @media (max-width: 1200px) and (min-width: 979px){
+                margin-left: 430px;
+            }
+        	@media (min-width: 768px) and (max-width: 979px) {
+                margin-left: 325px;       
+        	}
+            @media (max-width: 767px){
+                left: auto;
+                right: 10px;
+                margin-left: 0;
+        	}
+                
+				ul{
+					list-style: none;
+					margin: 0;
+						li{
+							width: 21px;
+							height: 21px;
+							display: inline-block;
+							margin: 3px;
+							border-radius: 500px;
+                            overflow: hidden;
+							cursor: pointer;
+                            background-color: #b3b5b7;
+							.transition(all 0.5s ease);
+								&:hover{
+                                    background-color: @blue; 
+								}
+								&.active{
+                                    
+                                    background-color: @blue; 
+								}
+						}
+				}
+		}
+		#previewSpinner{
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			display: block;
+			top: 50%;
+			left: 50%;
+			margin-left: -25px;
+			margin-top: -25px;
+			border-radius: 25px;
+			z-index: 99;
+			background: url(images/spinner.gif) 50% 50% no-repeat @white;
+		}
+}

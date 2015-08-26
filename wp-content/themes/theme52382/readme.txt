@@ -1,0 +1,5 @@
+<p>This WordPress theme is 100% FREE! We've made sure that it's highly customizable and has its premium look and feel. The theme is built with <a href="http://www.cherryframework.com/">Cherry Framework</a>, an in-house development of TemplateMonster. This framework includes extensive amount of shortcodes and widgets that can help you make any possible customizations to your future website. Being integrated with Bootstrap the template has all those things on board that make Bootstrap so powerful: a fluid grid layout, custom form elements, typography, JavaScript interaction and cross-browser compatibility.</p>
+
+<p>You're free to download this theme to use either for free or for commercial projects. The only thing you can't do is resell this template; all copyrights and licenses belong to TemplateMonster.</p>
+
+<p>Even though we don't charge for this free WordPress theme, but we would really appreciate if you could leave a footer link intact. We are not asking much and hope you are OK with that.</p>
